@@ -25,7 +25,6 @@ const Login = () => {
       console.error("Signup failed:", error);
     }
   };
-  console.log(tntntnwjd);
 
   return (
     <div className="login-form-container">
