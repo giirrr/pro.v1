@@ -14,6 +14,7 @@ export const signup = async (userData) => {
       return response.data;
     } else {
       console.log("couponcoupupon");
+      console.log("couponco");
       // 실패 응답 처리햐
       throw new Error("서버 응답 오류(쿠폰브렌치)");
     }
