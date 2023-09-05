@@ -13,6 +13,7 @@ export const signup = async (userData) => {
       // 성공 응답 처리
       return response.data;
     } else {
+      console.log("concpiiojnc");
       // 실패 응답 처리
       throw new Error("서버 응답 오류(쿠폰브렌치)");
     }
