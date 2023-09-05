@@ -14,7 +14,7 @@ export const signup = async (userData) => {
       return response.data;
     } else {
       // 실패 응답 처리
-      throw new Error("서버 응답 오류");
+      throw new Error("서버 응답 오류(쿠폰브렌치)");
     }
   } catch (error) {
     // 에러 응답 처리
