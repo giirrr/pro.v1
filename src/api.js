@@ -13,16 +13,8 @@ export const signup = async (userData) => {
       // 성공 응답 처리
       return response.data;
     } else {
-<<<<<<< HEAD
-      console.log("mainaimaiianimna");
-      console.log("mainaimaiia");
-      // 실패 응답 처리
-=======
-      console.log("couponcoupupon");
-      console.log("couponco");
       // 실패 응답 처리햐
->>>>>>> coupon
-      throw new Error("서버 응답 오류(쿠폰브렌치)");
+      throw new Error("서버 응답 오류");
     }
   } catch (error) {
     // 에러 응답 처리

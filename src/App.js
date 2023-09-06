@@ -1,18 +1,37 @@
 import "./App.css";
 import React from "react";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
 import axios from "axios";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 
+import LoginForm from "./components/LoginForm";
+import LogoutButton from "./components/LogoutButton";
+import SignupForm from "./components/SignupForm";
+
 function App() {
+  const [user, setUser] = useState(null);
+
+  const handleLogin = (username) => {
+    setUser(username);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+  };
+
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="/v1/employee/signin/" element={<Signup />}></Route>
-      </Routes>
+      {user ? (
+        <>
+          <h1>Welcome, {user}!</h1>
+          <LogoutButton onLogout={handleLogout} />
+        </>
+      ) : (
+        <>
+          <LoginForm onLogin={handleLogin} />
+          <SignupForm />
+        </>
+      )}
     </div>
   );
 }
